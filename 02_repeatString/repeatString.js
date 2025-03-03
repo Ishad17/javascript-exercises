@@ -1,14 +1,19 @@
 const repeatString = function(string,num) {
 
-    if (num<0){
+    if(num < 0){
         return 'ERROR';
     }
-    let word = '';
-
-    for (i=0; i<num; i++){
-        word = word + string;
+    else if( num == 0){
+        return "";
     }
-    return word;
+
+
+    let stringNew = string;
+
+    for(let i = 1 ; i < num ; i++){  
+        stringNew += string;
+    }
+    return stringNew;
 };
 
 repeatString('hey',3);
